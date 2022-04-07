@@ -52,6 +52,7 @@
         </div>
       </el-dialog>
 
+      <h5>Главное фото</h5>
       <el-upload
         class="mb"
         drag
@@ -64,7 +65,22 @@
         <div class="el-upload__text">Перетащите картинку <em>или нажмите</em></div>
         <div class="el-upload__tip" slot="tip">Файлы с расширением jpg/png</div>
       </el-upload>
+      <br>
 
+      <h5>Галерея фото</h5>
+      <el-upload
+        class="mb"
+        drag
+        multiple
+        ref="uploads"
+        action="https://jsonplaceholder.typicode.com/posts/"
+        :on-change="handleImagesChange"  
+        :auto-upload="false"
+      >
+        <i class="el-icon-upload"></i>
+        <div class="el-upload__text">Перетащите картинки <em>или нажмите</em></div>
+        <div class="el-upload__tip" slot="tip">Файлы с расширением jpg/png</div>
+      </el-upload>
       <el-form-item>
         <el-button type="primary" native-type="submit" round :loading="loading">
           Создать пост
@@ -84,6 +100,7 @@ export default {
   data() {
     return {
       image: null,
+      images: null,
       previewDialog : false,
       loading: false,
       controls: {
@@ -121,7 +138,9 @@ export default {
   methods: {
     handleImageChange(file, fileLiset) {
       this.image = file.raw
-      console.log(this.image)
+    },
+    handleImagesChange(file, fileLiset) {
+      this.images = fileLiset
     },
     onSubmit() {
       this.$refs.form.validate(async valid => {
@@ -134,9 +153,9 @@ export default {
             price: this.controls.price,
             category: this.controls.category,
             categoryname: this.categoryname,
-            image: this.image
+            image: this.image,
+            images: this.images,
           }
-
           try {
             await this.$store.dispatch('post/create', formData)
             this.controls.title = ''
@@ -145,11 +164,11 @@ export default {
             this.controls.category = ''
             this.image = null
             this.$refs.upload.clearFiles()
+            this.$refs.uploads.clearFiles()
             this.$message.success('Пост создан')
           } catch (e) {} finally {
             this.loading = false
           }
-          
         } else {
           this.$message.warning('Форма не валидна')
         }

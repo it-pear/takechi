@@ -30,6 +30,10 @@ const postSchema = new Schema({
     default: 0
   },
   imageUrl: String,
+  images: {
+    type: Array,
+    required: true
+  },
   comments: [
     {
       type: Schema.Types.ObjectId,

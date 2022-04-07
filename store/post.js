@@ -54,7 +54,17 @@ export const actions = {
       throw e
     }
   },
-  async create ({commit}, {title, text, price, category, categoryname, image}) {
+  async uploudImages({commit}, {id, image}) {
+    try {
+      const fd = new FormData()
+      fd.append('image', image, image.name)
+      return await this.$axios.$put(`/api/post/uploudImage/${id}`, fd)
+    } catch (e) {
+      commit('setError', e, {root: true})
+      throw e
+    }
+  },
+  async create ({commit}, {title, text, price, category, categoryname, image, images}) {
 
     try{
       const fd = new FormData()
@@ -65,6 +75,7 @@ export const actions = {
       fd.append('category', category)
       fd.append('categoryname', categoryname)
       fd.append('image', image, image.name)
+      fd.append('images', images)
 
       return await this.$axios.$post('/api/post/admin', fd)
 

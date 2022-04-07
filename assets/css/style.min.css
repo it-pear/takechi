@@ -10906,9 +10906,13 @@ a.text-dark:focus, a.text-dark:hover {
     text-align: center
 }
 
+.logo img  {
+    width: 80px;
+}
 .navik-header .logo img {
     max-width: 100%;
-    height: auto
+    height: auto;
+    width: 80px;
 }
 
 .navik-header-container {
@@ -12712,7 +12716,7 @@ a.text-dark:focus, a.text-dark:hover {
         transform: translateY(-50%)
     }
     .navik-header .logo img {
-        width: auto;
+        width: 80px;
         max-width: inherit;
         max-height: 80px
     }
@@ -17243,7 +17247,7 @@ span.ico-holder {
 }
 
 #banner-4 {
-    background-image: url(../images/banner-4.jpg);
+    background-image: url(../images/banner-4.png);
     background-position: top center
 }
 
@@ -21200,7 +21204,7 @@ nav a#pull {
         float: none
     }
     .navik-header .logo img {
-        width: auto;
+        width: 65px;
         max-width: inherit;
         max-height: 70px
     }

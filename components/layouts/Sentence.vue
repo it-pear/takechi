@@ -11,7 +11,8 @@
     <div class="slider">
       <img src="@/assets/img/full-fon.jpg" />
       <img src="@/assets/img/mb-fon.jpg" />
-      <h1>Доставка еды и кондитерских изделий "Точка"</h1>
+      <h1>Доставка роллов и суши в Геленджике</h1>
+      <a href="#menu-6" class="btn btn-lg btn-red tra-red-hover">Смотреть меню</a>
     </div>
   </VueSlickCarousel>
   
@@ -36,7 +37,7 @@ export default {
   height: 100vh;
   position: relative;
 }
-h1 {
+.slider h1 {
   position: absolute;
   padding: 0 15px;
   top: 0;
@@ -50,6 +51,16 @@ h1 {
   color: white;
   text-align: center;
   text-transform: none;
+}
+.slider .btn {
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: max-content;
+  height: max-content;
 }
 @media (max-width: 772px) {
   h1 {

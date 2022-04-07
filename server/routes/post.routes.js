@@ -40,6 +40,12 @@ router.put(
   passport.authenticate('jwt', {session: false}), 
   ctr.updateImage
 )
+router.put(
+  '/uploudImages/:id',
+  passport.authenticate('jwt', {session: false}),
+  upload.single('image'),
+  ctr.uploudImage,
+)
 
 router.delete(
   '/admin/:id',

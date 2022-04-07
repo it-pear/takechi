@@ -20,16 +20,6 @@
             :key="product._id"
             :product="product"
           />
-          <!-- <products-list-card
-            v-for="product in filteredPosts.slice(0, 8)" 
-            :key="product.id"
-            :product="product"
-          />
-          <products-list-card
-            v-for="product in filteredPoststwo.slice(0, 3)" 
-            :key="product.id"
-            :product="product"
-          /> -->
         </div>
 
       </div>
