@@ -3,17 +3,21 @@ const Post = require('../models/post.model')
 
 debugger
 module.exports.create = async (req, res) => {
+  const imagesUrls = req.files.images.map((item) => {
+    return {
+      filname: item.filename
+    }
+  })
   const post = new Post({
     title: req.body.title,
     text: req.body.text,
     price: req.body.price,
     category: req.body.category,
     categoryname: req.body.categoryname,
-    imageUrl: `/${req.body.imageUrl}`,
-    images: req.body
+    imageUrl: `/${req.files.image[0].filename}`,
+    images: imagesUrls
   })
 
-  // console.log(req.body.title)
   try {
     await post.save()
     res.status(201).json(post)

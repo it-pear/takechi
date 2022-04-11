@@ -75,12 +75,12 @@ export const actions = {
       fd.append('categoryname', categoryname)
       fd.append('image', image)
       for( var i = 0; i < images.length; i++ ){
-        let file = images[i];
+        let file = images[i].raw;
         fd.append('images', file);
       }
-      for (var pair of fd.entries()) {
-        console.log(pair[0]+ ', ' + pair[1]); 
-      }
+      // for (var pair of fd.entries()) {
+      //   console.log(pair[0]+ ', ' + pair[1]); 
+      // }
       return await this.$axios.$post('/api/post/admin', fd)
 
     } catch (e) {

@@ -8,16 +8,11 @@ const router = Router()
 router.post(
   '/admin/',
   passport.authenticate('jwt', {session: false}),
-  // upload.single('image'), 
-  // upload.array('images'), 
-  
   upload.fields([
     { name: 'image', maxCount: 1 },
     { name: 'images', maxCount: 10 },
   ]),
-  ctr.create,
-  // (req, res) => {},
-  
+  ctr.create 
 )
 
 router.post(

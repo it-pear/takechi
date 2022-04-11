@@ -68,7 +68,7 @@
       <br>
 
       <h5>Галерея фото</h5>
-      <!-- <el-upload
+      <el-upload
         class="mb"
         drag
         multiple
@@ -80,9 +80,7 @@
         <i class="el-icon-upload"></i>
         <div class="el-upload__text">Перетащите картинки <em>или нажмите</em></div>
         <div class="el-upload__tip" slot="tip">Файлы с расширением jpg/png</div>
-      </el-upload> -->
-
-      <input type="file" ref="fileimage" multiple v-on:change="handleFileUpload()">
+      </el-upload>
       
       <el-form-item>
         <el-button type="primary" native-type="submit" round :loading="loading">
@@ -141,12 +139,8 @@ export default {
     handleImageChange(file, fileLiset) {
       this.image = file.raw
     },
-    // handleImagesChange(file, fileLiset) {
-    //   this.images = fileLiset
-    // },
-    handleFileUpload(){
-      this.images = this.$refs.fileimage.files;
-      console.log(this.images)
+    handleImagesChange(file, fileLiset) {
+      this.images = fileLiset
     },
     onSubmit() {
       this.$refs.form.validate(async valid => {
@@ -175,6 +169,7 @@ export default {
             this.$message.success('Пост создан')
           } catch (e) {} finally {
             this.loading = false
+            this.$message.success('Пост создан')
           }
         } else {
           this.$message.warning('Форма не валидна')
