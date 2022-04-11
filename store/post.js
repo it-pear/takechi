@@ -66,17 +66,21 @@ export const actions = {
   },
   async create ({commit}, {title, text, price, category, categoryname, image, images}) {
 
-    try{
+    try {
       const fd = new FormData()
-
       fd.append('title', title)
       fd.append('text', text)
       fd.append('price', price)
       fd.append('category', category)
       fd.append('categoryname', categoryname)
-      fd.append('image', image, image.name)
-      fd.append('images', images)
-
+      fd.append('image', image)
+      for( var i = 0; i < images.length; i++ ){
+        let file = images[i];
+        fd.append('images', file);
+      }
+      for (var pair of fd.entries()) {
+        console.log(pair[0]+ ', ' + pair[1]); 
+      }
       return await this.$axios.$post('/api/post/admin', fd)
 
     } catch (e) {

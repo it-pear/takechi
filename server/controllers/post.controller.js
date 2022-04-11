@@ -9,8 +9,8 @@ module.exports.create = async (req, res) => {
     price: req.body.price,
     category: req.body.category,
     categoryname: req.body.categoryname,
-    imageUrl: `/${req.file.filename}`,
-    images: req.body.images
+    imageUrl: `/${req.body.imageUrl}`,
+    images: req.body
   })
 
   // console.log(req.body.title)

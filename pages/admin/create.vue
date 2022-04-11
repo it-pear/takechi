@@ -68,7 +68,7 @@
       <br>
 
       <h5>Галерея фото</h5>
-      <el-upload
+      <!-- <el-upload
         class="mb"
         drag
         multiple
@@ -80,14 +80,16 @@
         <i class="el-icon-upload"></i>
         <div class="el-upload__text">Перетащите картинки <em>или нажмите</em></div>
         <div class="el-upload__tip" slot="tip">Файлы с расширением jpg/png</div>
-      </el-upload>
+      </el-upload> -->
+
+      <input type="file" ref="fileimage" multiple v-on:change="handleFileUpload()">
+      
       <el-form-item>
         <el-button type="primary" native-type="submit" round :loading="loading">
           Создать пост
         </el-button>
       </el-form-item>
     </el-form>
-
   </div>
 </template>
 
@@ -139,12 +141,16 @@ export default {
     handleImageChange(file, fileLiset) {
       this.image = file.raw
     },
-    handleImagesChange(file, fileLiset) {
-      this.images = fileLiset
+    // handleImagesChange(file, fileLiset) {
+    //   this.images = fileLiset
+    // },
+    handleFileUpload(){
+      this.images = this.$refs.fileimage.files;
+      console.log(this.images)
     },
     onSubmit() {
       this.$refs.form.validate(async valid => {
-        if (valid && this.image) {
+        if (valid && this.image && this.images) {
           this.loading = true
           
           const formData = {
@@ -156,6 +162,7 @@ export default {
             image: this.image,
             images: this.images,
           }
+  
           try {
             await this.$store.dispatch('post/create', formData)
             this.controls.title = ''
