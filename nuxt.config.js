@@ -36,6 +36,10 @@ module.exports = {
     '@nuxtjs/axios'
   ],
 
+  axios: {
+    baseURL: 'http://takeshigel.ru'
+  },
+
   // axios: {
   //   baseURL: 'http://kulinariagel.ru'
   // },
