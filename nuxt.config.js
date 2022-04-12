@@ -42,7 +42,8 @@ module.exports = {
 
   env: {
     appName: 'takeshigel.ru',
-    port: 8080
+    port: 8080,
+    baseURL: 'http://takeshigel.ru'
   },
 
   build: {
