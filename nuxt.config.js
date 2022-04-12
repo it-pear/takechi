@@ -40,10 +40,6 @@ module.exports = {
     baseURL: 'http://takeshigel.ru'
   },
 
-  // axios: {
-  //   baseURL: 'http://kulinariagel.ru'
-  // },
-
   env: {
     appName: 'takeshigel.ru',
     port: 8080
