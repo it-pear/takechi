@@ -2,7 +2,7 @@ const pkg = require('./package')
 
 
 module.exports = {
-  mode: 'history' ,
+  mode: 'universal' ,
   server: {
     port: 8080
   },
