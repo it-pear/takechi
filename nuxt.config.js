@@ -3,9 +3,9 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'history' ,
-  // server: {
-  //   host: '62.113.98.94'
-  // },
+  server: {
+    port: 8080
+  },
   head: {
     title: pkg.name,
     meta: [
@@ -45,7 +45,8 @@ module.exports = {
   // },
 
   env: {
-    appName: 'kulinariagel.ru'
+    appName: 'takeshigel.ru',
+    port: 8080
   },
 
   build: {

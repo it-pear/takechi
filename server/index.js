@@ -10,9 +10,8 @@ async function start() {
   const nuxt = new Nuxt(config)
   
   const {
-    // process.env.PORT ||
     host = process.env.HOST || '127.0.0.1',
-    port =  3001
+    port = process.env.PORT || 3000
   } = nuxt.options.server
 
   if (config.dev) {
@@ -24,7 +23,7 @@ async function start() {
 
   app.listen(port, host, () => {
     consola.ready({
-      message: `Server listening on http://${host}:3000` ,
+      message: `Server listening on http://${host}:${port}` ,
       badge: true
     })
   })
