@@ -4,9 +4,12 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap';
-@import 'https://fonts.googleapis.com/css?family=Oswald:wght@200;300;400;500;600;700&display=swap';
-@import 'https://fonts.googleapis.com/css?family=Lilita+One&display=swap';
+ /* Montserrat
+Montserrat
+Montserrat */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;300;400;500;700;900&display=swap');
+
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -34,7 +37,7 @@
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Montserrat, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
 
@@ -56,7 +59,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Montserrat, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -332,7 +335,7 @@ template {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-bottom: .5rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.2
 }
 
@@ -6305,7 +6308,7 @@ a.close.disabled {
     z-index: 1070;
     display: block;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Montserrat, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -6418,7 +6421,7 @@ a.close.disabled {
     z-index: 1060;
     display: block;
     max-width: 276px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Montserrat, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -13421,7 +13424,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #283034;
     font-weight: 300
 }
@@ -14195,7 +14198,7 @@ body {
 }
 
 .bg-salmon {
-    background-color: #e84e1d
+    background-color: rgba(191, 22, 43, 1)
 }
 
 .bg-silk {
@@ -14262,9 +14265,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     line-height: 1.3;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0
 }
@@ -14326,7 +14329,7 @@ h4.h4-lg {
 }
 
 h4.h4-xl {
-    font-size: 2.375rem
+    font-size: 2rem
 }
 
 h3.h3-xs {
@@ -14354,7 +14357,7 @@ h2.h2-xs {
 }
 
 h2.h2-sm {
-    font-size: 3.25rem
+    font-size: 2.25rem
 }
 
 h2.h2-md {
@@ -14362,11 +14365,11 @@ h2.h2-md {
 }
 
 h2.h2-lg {
-    font-size: 3.5rem
+    font-size: 2.5rem
 }
 
 h2.h2-xl {
-    font-size: 3.75rem
+    font-size: 2.75rem
 }
 
 p.p-sm {
@@ -14417,7 +14420,9 @@ ul.txt-list {
     list-style: disc;
     margin-left: 15px
 }
-
+.txt-list li {
+    font-weight: 500;
+}
 .txt-list li i {
     position: relative;
     font-size: 1.05rem;
@@ -14434,7 +14439,7 @@ ul.txt-list {
 
 .btn {
     background-color: transparent;
-    font-family: 'Oswald', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     color: #fff;
     font-size: 16px;
     line-height: 1;
@@ -14509,14 +14514,14 @@ ul.txt-list {
 
 .btn-salmon, .scroll .btn-salmon, .white-color .btn-salmon, .salmon-hover:hover, .scroll .salmon-hover:hover, .white-color .salmon-hover:hover {
     color: #fff !important;
-    background-color: #e84e1d;
-    border-color: #e84e1d !important
+    background-color: rgba(191, 22, 43, 1);
+    border-color: rgba(191, 22, 43, 1) !important
 }
 
 .btn-tra-salmon, .scroll .btn-tra-salmon, .white-color .btn-tra-salmon, .tra-salmon-hover:hover, .scroll .tra-salmon-hover:hover, .white-color .tra-salmonhover:hover {
-    color: #e84e1d !important;
+    color: rgba(191, 22, 43, 1) !important;
     background-color: transparent;
-    border-color: #e84e1d !important
+    border-color: rgba(191, 22, 43, 1) !important
 }
 
 .btn-yellow, .scroll .btn-yellow, .white-color .btn-yellow, .yellow-hover:hover, .scroll .yellow-hover:hover, .white-color .yellow-hover:hover {
@@ -14742,7 +14747,7 @@ ul.txt-list {
 }
 
 .salmon-color, .salmon-color h2, .salmon-color h3, .salmon-color h4, .salmon-color h5, .salmon-color h6, .salmon-color p, .salmon-color a, .salmon-color li, .salmon-color i, .white-color .salmon-color, .salmon-color span {
-    color: #e84e1d
+    color: rgba(191, 22, 43, 1)
 }
 
 .red-color, .red-color h2, .red-color h3, .red-color h4, .red-color h5, .red-color h6, .red-color p, .red-color a, .red-color li, .red-color i, .white-color .red-color, .brown-color .red-color, .red-color span {
@@ -14863,7 +14868,7 @@ span.item-code {
 }
 
 .like-ico:hover>a span {
-    color: #e84e1d !important
+    color: rgba(191, 22, 43, 1) !important
 }
 
 .menu-img-zoom {
@@ -14905,7 +14910,7 @@ span.item-code {
     font-size: 0.9rem;
     line-height: 1;
     font-weight: 700;
-    padding: 8px 14px;
+    padding: 10px 14px;
     border-radius: 4px;
     -webkit-transition: all 500ms ease-in-out;
     -o-transition: all 500ms ease-in-out;
@@ -15089,7 +15094,7 @@ span.item-code {
     border-radius: 50%;
     top: 0;
     left: 0;
-    background: #e84e1d
+    background: rgba(191, 22, 43, 1)
 }
 
 .cssload-ball-1 {
@@ -15376,7 +15381,7 @@ span.item-code {
 
 .navik-menu ul li>a {
     display: block;
-    font-family: 'Oswald', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: 1.095rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -15416,7 +15421,7 @@ span.item-code {
 }
 
 .navik-menu.navik-salmon ul li:hover>a, .navik-menu.navik-salmon .mega-menu-heading a:hover {
-    color: #e84e1d
+    color: rgba(191, 22, 43, 1)
 }
 
 #header-3 .navik-menu ul li.nav-btn a {
@@ -15438,7 +15443,7 @@ span.item-code {
 }
 
 #header-3 .navik-menu ul li.nav-btn.salmon-color>a {
-    color: #e84e1d
+    color: rgba(191, 22, 43, 1)
 }
 
 span.ico-holder {
@@ -15494,7 +15499,7 @@ span.ico-holder {
 }
 
 .navik-menu ul ul li>a {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 500;
     font-style: normal;
@@ -15699,7 +15704,7 @@ span.ico-holder {
 }
 
 #hero-1 h2, #hero-2 h2, #hero-3 h2, .hero-4-txt h2, #hero-6 h2, #hero-9 h2 {
-    font-family: 'Lilita One', cursive;
+    font-family: 'Montserrat One', cursive;
     font-size: 7.25rem;
     line-height: 1.1;
     letter-spacing: 3px;
@@ -15739,7 +15744,7 @@ span.ico-holder {
 }
 
 .hero-4-txt h3 {
-    font-family: 'Lilita One', cursive;
+    font-family: 'Montserrat One', cursive;
     font-size: 2.5rem;
     line-height: 1;
     letter-spacing: 3px;
@@ -15747,7 +15752,7 @@ span.ico-holder {
 }
 
 #hero-5 h2 {
-    font-family: 'Lilita One', cursive;
+    font-family: 'Montserrat One', cursive;
     font-size: 17rem;
     line-height: 1;
     letter-spacing: 0;
@@ -15766,7 +15771,7 @@ span.ico-holder {
 
 #hero-10 h2 {
     display: inline-block;
-    font-family: 'Lilita One', cursive;
+    font-family: 'Montserrat One', cursive;
     font-size: 18rem;
     line-height: 1;
     letter-spacing: 3px;
@@ -15817,7 +15822,7 @@ span.ico-holder {
 }
 
 #hero-12 h2 {
-    font-family: 'Lilita One', cursive;
+    font-family: 'Montserrat One', cursive;
     font-size: 8.5rem;
     line-height: 1;
     letter-spacing: 3px;
@@ -15831,7 +15836,7 @@ span.ico-holder {
 }
 
 #hero-1 p span {
-    font-family: 'Oswald', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: 2.35rem;
     line-height: 1;
     font-weight: 700;
@@ -16463,7 +16468,7 @@ span.ico-holder {
 }
 
 .pbox-5-price p span, .pbox-9-price p span {
-    font-family: 'Oswald', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: 1.75rem;
     line-height: 1;
     font-weight: 500;
@@ -16696,7 +16701,7 @@ span.ico-holder {
 }
 
 .item-data-salmon-hover .menu-3-list li:hover .menu-3-item-data {
-    background-color: #e84e1d
+    background-color: rgba(191, 22, 43, 1)
 }
 
 .menu-3-list li:hover .menu-3-item-data h6 {
@@ -17170,7 +17175,7 @@ span.ico-holder {
 }
 
 .review-1-txt p.testimonial-autor {
-    font-family: 'Oswald', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: 1.1rem;
     line-height: 1;
     font-weight: 500;
@@ -17919,7 +17924,7 @@ img.appstore-original {
 }
 
 .cbox-1 p a, .cbox-1 p.yellow-color {
-    font-family: 'Oswald', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: 1.85rem;
     line-height: 1;
     font-weight: 700;
@@ -18282,7 +18287,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .footer-contacts p span {
-    font-family: 'Oswald', sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: 1.85rem;
     line-height: 1;
     font-weight: 700;
@@ -21420,7 +21425,7 @@ nav a#pull {
         font-size: 2.15rem
     }
     h2.h2-sm {
-        font-size: 2.25rem
+        font-size: 1.5rem
     }
     h2.h2-md {
         font-size: 2.35rem
@@ -22539,7 +22544,7 @@ nav a#pull {
         font-size: 2.1rem
     }
     h2.h2-sm {
-        font-size: 2.2rem
+        font-size: 1.5rem
     }
     h2.h2-md {
         font-size: 2.3rem
@@ -23833,7 +23838,7 @@ nav a#pull {
         font-size: 1.9rem
     }
     h2.h2-sm {
-        font-size: 2rem
+        font-size: 1rem
     }
     h2.h2-md {
         font-size: 2.1rem
@@ -23915,7 +23920,8 @@ nav a#pull {
     }
     .add-to-cart {
         font-size: 1rem;
-        padding: 10px 17px
+        padding: 13px 17px;
+        margin-top: 1px;
     }
     .add-to-cart.ico-10 [class*="flaticon-"]:before, .add-to-cart.ico-10 [class*="flaticon-"]:after {
         font-size: 0.95rem
@@ -26494,8 +26500,13 @@ nav a#pull {
 .sentence h1 {
     color: white;
     margin-bottom: 24px;
-    font-size: 46px;
+    font-size: 38px;
     text-align: center;
+}
+@media (max-width: 772px) {
+    .sentence h1 {
+        font-size: 28px;
+    }
 }
 .sentence h1,
 .sentence .btn {
@@ -26523,9 +26534,23 @@ nav a#pull {
 .menu-section .menu-6-item .h5-sm{
     padding-right: 20px;
 }
-.menu-section  .h5-sm{
+.menu-section .h5-sm{
     color: rgba(17, 15, 16, 1);
     word-wrap: break-word;
+}
+@media (max-width: 772px) {
+    
+    .menu-section .h5-sm{
+        font-size: 18px;
+        position: relative;
+        top: 4px;
+    }
+    .menu-section .menu-6-item .h5-sm{
+        font-size: 22px;
+        word-wrap: break-word;
+        padding-right: 10px;
+        margin-bottom: 18px;
+    }
 }
 a {
     color: rgba(17, 15, 16, 1);
@@ -26539,3 +26564,7 @@ a:hover {
 .add-to-cart:hover a {
     color: white !important;
 }
+
+.header .navik-menu {
+    flex: 1 1 100% !important;
+} 
