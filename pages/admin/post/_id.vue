@@ -4,7 +4,7 @@
       <el-breadcrumb-item to="/admin/list">Посты</el-breadcrumb-item>
       <el-breadcrumb-item>{{post.title}}</el-breadcrumb-item>
     </el-breadcrumb>
-{{post}}
+
     <el-form
       :model="controls"
       :rules="rules"

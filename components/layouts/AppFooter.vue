@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-12 text-center">
           <div class="footer-logo">
-            <img src="@/assets/img/logo.svg" alt="footer-logo" />
+            <img src="@/assets/img/logo-footer.svg" alt="footer-logo" />
           </div>
           <div class="footer-socials-links">
             <ul class="foo-socials text-center clearfix w-100 text-center">

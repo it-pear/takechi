@@ -38,7 +38,12 @@ export default {
 
 <style lang="scss">
 .categoryimg {
-  max-height: 55px;
+  height: 35px;
+}
+@media (max-width: 772px) {
+  .categoryimg {
+    height: 25px;
+  }
 }
 @media (min-width: 772px) {
   #navik-header-container-top-list {

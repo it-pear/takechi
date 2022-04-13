@@ -10943,7 +10943,7 @@ a.text-dark:focus, a.text-dark:hover {
     }
     .tel-mb {
         display: block;
-        color: #181818;
+        color: #ffffff;
         font-size: 20px;
         font-weight: 500;
         margin-left: 15px;
@@ -10956,7 +10956,7 @@ a.text-dark:focus, a.text-dark:hover {
     }
     .basket-mb {
         display: block;
-        margin-left: 10px;
+        margin-left: 15px;
     }
 }
 
@@ -11092,7 +11092,7 @@ a.text-dark:focus, a.text-dark:hover {
 .line-menu {
     width: 100%;
     height: 4px;
-    background-color: #111;
+    background-color: #ffffff;
     border-radius: 2px
 }
 
@@ -13036,7 +13036,7 @@ a.text-dark:focus, a.text-dark:hover {
         display: none
     }
     .header-transparent-on .navik-menu>ul>li>a, .header-opacity-on .navik-menu>ul>li>a {
-        color: #181818
+        color: #ffffff
     }
     .header-transparent-on .navik-menu>ul>li>a .navik-menu-icon, .header-opacity-on .navik-menu>ul>li>a .navik-menu-icon {
         color: rgba(255, 255, 255, 0.85)
@@ -14191,7 +14191,7 @@ body {
 }
 
 .bg-red {
-    background-color: #e3000e
+    background-color: rgba(191, 22, 43, 1)
 }
 
 .bg-salmon {
@@ -14207,7 +14207,7 @@ body {
 }
 
 .bg-yellow {
-    background-color: #f7be27
+    background-color: rgba(191, 22, 43, 1)
 }
 
 .bg-01, .bg-02, .bg-03, .bg-04, .bg-05, .bg-06 {
@@ -14390,7 +14390,7 @@ p.p-xl {
 }
 
 a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
     -webkit-transition: all 400ms ease-in-out;
     -o-transition: all 400ms ease-in-out;
@@ -14398,7 +14398,7 @@ a {
 }
 
 a:hover {
-    color: #333;
+    color: #fff;
     text-decoration: none
 }
 
@@ -14446,7 +14446,8 @@ ul.txt-list {
     border-radius: 2px;
     -webkit-transition: all 400ms ease-in-out;
     -o-transition: all 400ms ease-in-out;
-    transition: all 400ms ease-in-out
+    transition: all 400ms ease-in-out;
+    font-weight: 500 !important;
 }
 
 .btn.btn-sm {
@@ -14484,14 +14485,14 @@ ul.txt-list {
 
 .btn-red, .scroll .btn-red, .white-color .btn-red, .red-hover:hover, .scroll .red-hover:hover, .white-color .red-hover:hover {
     color: #fff !important;
-    background-color: #e3000e;
-    border-color: #e3000e !important
+    background-color: rgba(191, 22, 43, 1);
+    border-color: rgba(191, 22, 43, 1) !important
 }
 
 .btn-tra-red, .scroll .btn-tra-red, .white-color .btn-tra-red, .tra-red-hover:hover, .scroll .tra-red-hover:hover, .white-color .tra-redhover:hover {
-    color: #e3000e !important;
+    color: rgba(191, 22, 43, 1) !important;
     background-color: transparent;
-    border-color: #e3000e !important
+    border-color: rgba(191, 22, 43, 1) !important
 }
 
 .btn-meat, .scroll .btn-meat, .white-color .btn-meat, .meat-hover:hover, .scroll .meat-hover:hover, .white-color .meat-hover:hover {
@@ -14520,8 +14521,8 @@ ul.txt-list {
 
 .btn-yellow, .scroll .btn-yellow, .white-color .btn-yellow, .yellow-hover:hover, .scroll .yellow-hover:hover, .white-color .yellow-hover:hover {
     color: #333435 !important;
-    background-color: #f7be27;
-    border-color: #f7be27 !important
+    background-color: rgba(191, 22, 43, 1);
+    border-color: rgba(191, 22, 43, 1) !important
 }
 
 .white-hover:hover, .white-color .white-hover:hover {
@@ -14745,7 +14746,7 @@ ul.txt-list {
 }
 
 .red-color, .red-color h2, .red-color h3, .red-color h4, .red-color h5, .red-color h6, .red-color p, .red-color a, .red-color li, .red-color i, .white-color .red-color, .brown-color .red-color, .red-color span {
-    color: #e3000e
+    color: rgba(191, 22, 43, 1)
 }
 
 .wine-color, .wine-color h2, .wine-color h3, .wine-color h4, .wine-color h5, .wine-color h6, .wine-color p, .wine-color a, .wine-color li, .wine-color i, .white-color .wine-color, .wine-color span {
@@ -14753,7 +14754,7 @@ ul.txt-list {
 }
 
 .yellow-color, .yellow-color h2, .yellow-color h3, .yellow-color h4, .yellow-color h5, .yellow-color h6, .yellow-color p, .yellow-color a, .yellow-color li, .yellow-color i, .white-color .yellow-color, .brown-color .yellow-color, .coffee-color .yellow-color, .yellow-color span {
-    color: #f7be27
+    color: rgba(191, 22, 43, 1)
 }
 
 .shadow-txt-white {
@@ -14778,7 +14779,7 @@ ul.txt-list {
 }
 
 .stars-rating i {
-    color: #f7be27;
+    color: rgba(191, 22, 43, 1);
     font-size: 0.85rem;
     line-height: 1
 }
@@ -14950,7 +14951,7 @@ span.item-code {
 }
 
 .add-to-cart.bg-yellow:hover {
-    background-color: #f5b200 !important
+    background-color: rgba(191, 22, 43, 0.8) !important
 }
 
 .add-to-cart.bg-salmon:hover {
@@ -15365,13 +15366,13 @@ span.item-code {
     position: fixed;
 }
 
-@media (min-width: 992px) {
+
     #header-3.navik-header {
         padding-top: 10px;
         padding-bottom: 10px;
-        background: rgba(165, 161, 161, 0.8);
+        background: rgba(30, 48, 68, 1);
     }
-}
+
 
 .navik-menu ul li>a {
     display: block;
@@ -15403,7 +15404,7 @@ span.item-code {
 }
 
 .navik-menu.navik-yellow ul li:hover>a, .navik-menu.navik-yellow .mega-menu-heading a:hover {
-    color: #f7be27
+    color: rgba(191, 22, 43, 1)
 }
 
 .navik-menu.navik-meat ul li:hover>a, .navik-menu.navik-meat .mega-menu-heading a:hover {
@@ -15411,7 +15412,7 @@ span.item-code {
 }
 
 .navik-menu.navik-red ul li:hover>a, .navik-menu.navik-red .mega-menu-heading a:hover {
-    color: #e3000e
+    color: rgba(191, 22, 43, 1)
 }
 
 .navik-menu.navik-salmon ul li:hover>a, .navik-menu.navik-salmon .mega-menu-heading a:hover {
@@ -15429,11 +15430,11 @@ span.item-code {
 }
 
 #header-3 .navik-menu ul li.nav-btn.yellow-color>a {
-    color: #181818;
+    color: #ffffff;
 }
 
 #header-3 .navik-menu ul li.nav-btn.red-color>a {
-    color: #e3000e
+    color: rgba(191, 22, 43, 1)
 }
 
 #header-3 .navik-menu ul li.nav-btn.salmon-color>a {
@@ -15444,10 +15445,23 @@ span.ico-holder {
     position: relative
 }
 
+.basket-ico .ico-holder {
+   top: 4px;
+   position: relative;
+}
+@media (max-width: 772px) {
+    .basket-ico .ico-holder {
+        top: 0;
+        position: relative;
+    }
+    .basket-ico .ico-holder .flaticon-shopping-bag:before {
+        font-size: 24px;
+    }
+}
 .basket-ico em.roundpoint {
     width: 20px;
     height: 20px;
-    background-color: #e3000e;
+    background-color: rgba(191, 22, 43, 1);
     border-radius: 50%;
     color: #fff;
     font-size: 13px;
@@ -16055,7 +16069,7 @@ span.ico-holder {
     background-image: url(../images/divider-05.jpg)
 }
 
-#pb-1-1 {
+/* #pb-1-1 {
     background-image: url(../images/pb-1-1.jpg)
 }
 
@@ -16065,7 +16079,7 @@ span.ico-holder {
 
 #pb-1-3 {
     background-image: url(../images/pb-1-3.jpg)
-}
+} */
 
 #pb-2-1 {
     background-image: url(../images/pb-2-1.jpg)
@@ -16084,6 +16098,7 @@ span.ico-holder {
     padding-left: 5px;
     padding-right: 5px
 }
+
 
 #promo-4 .col-lg-5, #promo-4 .col-lg-7, #promo-5 .col-lg-3, #promo-5 .col-lg-6 {
     padding-left: 8px;
@@ -16669,7 +16684,7 @@ span.ico-holder {
 }
 
 .menu-3-list li:hover .menu-3-item-data {
-    background-color: #f7be27
+    background-color: rgba(191, 22, 43, 1)
 }
 
 .item-data-meat-hover .menu-3-list li:hover .menu-3-item-data {
@@ -16677,7 +16692,7 @@ span.ico-holder {
 }
 
 .item-data-red-hover .menu-3-list li:hover .menu-3-item-data {
-    background-color: #e3000e
+    background-color: rgba(191, 22, 43, 1)
 }
 
 .item-data-salmon-hover .menu-3-list li:hover .menu-3-item-data {
@@ -16892,6 +16907,9 @@ span.ico-holder {
     position: relative;
     z-index: 997
 }
+.tabs-1 li img {
+    margin: auto;
+}
 @media (max-width: 480px) {
     #tabs-nav {
         width: 100%;
@@ -16923,7 +16941,7 @@ span.ico-holder {
 }
 
 .tabs-1.red-tabs li.current span {
-    color: #e3000e
+    color: rgba(191, 22, 43, 1)
 }
 
 .tabs-1.brown-tabs li.current span {
@@ -17185,7 +17203,7 @@ span.ico-holder {
 }
 
 .review-rating i {
-    color: #f7be27;
+    color: rgba(191, 22, 43, 1);
     font-size: 1.1rem;
     line-height: 1;
     margin: 0 1px
@@ -17824,6 +17842,9 @@ img.appstore-original {
 #contacts-5 .section-title {
     margin-top: 60px
 }
+#contacts-5 .h5-lg {
+    color: rgba(191, 22, 43, 1);
+}
 
 .cbox-1 {
     margin-bottom: 30px
@@ -18451,7 +18472,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 #product-page {
-    background-image: url(../images/menu-3-2-img-1.jpg)
+    background-image: url(../images/gift-page.jpg)
 }
 
 #team-page {
@@ -18558,9 +18579,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .page-link:hover, .page-item.active .page-link {
-    background-color: #f7be27;
+    background-color: rgba(191, 22, 43, 1);
     color: #151515;
-    border-color: #f7be27;
+    border-color: rgba(191, 22, 43, 1);
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05)
 }
@@ -18645,11 +18666,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     border-radius: 4px;
     -webkit-transition: all 500ms ease-in-out;
     -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out
+    transition: all 500ms ease-in-out;
+    color: white;
 }
 
 .add-to-cart-btn.bg-yellow:hover {
-    background-color: #f5b200 !important
+    background-color: rgba(191, 22, 43, 0.8) !important
 }
 
 #product-1-data .tab-content {
@@ -18688,7 +18710,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 #product-1-data .tabs-1 li.current {
-    background-color: #f7be27
+    background-color: rgba(191, 22, 43, 1)
 }
 
 .tabs-2 li {
@@ -19286,7 +19308,8 @@ nav a#pull {
     }
     .navik-header .logo {
         padding: 10px 0;
-        float: none
+        float: none;
+        padding-bottom: 0;
     }
     .navik-header .logo img {
         width: auto;
@@ -19325,8 +19348,8 @@ nav a#pull {
     }
     .navik-menu ul li>a, #header-3 .navik-menu ul li>a {
         font-size: 20px;
-        background-color: rgba(160, 160, 160, 0.05);
-        margin-bottom: 7px
+        margin-bottom: 7px;
+        color: white;
     }
     .navik-menu ul li.basket-ico>a {
         margin-bottom: 10px
@@ -20143,7 +20166,8 @@ nav a#pull {
     }
     .navik-header .logo {
         padding: 10px 0;
-        float: none
+        float: none;
+        padding-bottom: 0;
     }
     .navik-header .logo img {
         width: auto;
@@ -20158,7 +20182,7 @@ nav a#pull {
     }
     .navik-menu ul li>a, #header-3 .navik-menu ul li>a {
         font-size: 20px;
-        background-color: rgba(160, 160, 160, 0.05);
+        
         margin-bottom: 7px
     }
     .navik-menu ul li.basket-ico>a {
@@ -21201,12 +21225,13 @@ nav a#pull {
     }
     .navik-header .logo {
         padding: 10px 0;
-        float: none
+        float: none;
+        padding-bottom: 0;
     }
     .navik-header .logo img {
-        width: 65px;
+        width: 60px;
         max-width: inherit;
-        max-height: 70px
+        max-height: 65px
     }
     .navik-menu {
         text-align: center
@@ -21216,7 +21241,7 @@ nav a#pull {
     }
     .navik-menu ul li>a, #header-3 .navik-menu ul li>a {
         font-size: 20px;
-        background-color: rgba(160, 160, 160, 0.05);
+        color: white;
         margin-bottom: 7px
     }
     .navik-menu ul li.basket-ico>a {
@@ -26391,7 +26416,7 @@ nav a#pull {
 }
 
 .nuxt-link-active .h5-sm{
-    color: #f7be27 !important;
+    color: rgba(191, 22, 43, 1) !important;
 }
 
 
@@ -26452,4 +26477,65 @@ nav a#pull {
     .burger-menu {
         top: 22px;
     }
+}
+
+.sentence {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../images/divider-05.jpg);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    position: relative;
+}
+.sentence h1 {
+    color: white;
+    margin-bottom: 24px;
+    font-size: 46px;
+    text-align: center;
+}
+.sentence h1,
+.sentence .btn {
+    z-index: 1;
+    position: relative;
+}
+.sentence:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(17,15,16,0.4);
+}
+@media (max-width: 772px) {
+    .sentence {
+        width: 100%;
+        min-height: 100vh;
+    }
+}
+
+
+.menu-section .menu-6-item .h5-sm{
+    padding-right: 20px;
+}
+.menu-section  .h5-sm{
+    color: rgba(17, 15, 16, 1);
+    word-wrap: break-word;
+}
+a {
+    color: rgba(17, 15, 16, 1);
+}
+a:hover {
+    color: rgba(17, 15, 16, 1);
+}
+.add-to-cart a {
+    color: white !important;
+}
+.add-to-cart:hover a {
+    color: white !important;
 }

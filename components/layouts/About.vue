@@ -16,8 +16,7 @@
           <div class="col-md-12 col-lg-12 text-center">
             <div class="about-3-txt mb-40">
               <h2 class="h2-sm">
-                О компании «TAKEHI»<br>
-                <small>кулинария и кондитерский цех в Геленджике</small>
+                <small>О компании «TAKEHI»<br> кулинария и кондитерский цех в Геленджике</small>
                 </h2>
 
               <p class="p-md">
