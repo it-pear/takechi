@@ -1,5 +1,5 @@
 <template>
-  <div class="col-sm-6 col-lg-3">
+  <div class="col-6 col-lg-3">
     <nuxt-link
       :to="`/product/${product._id}`"
     >

@@ -21,6 +21,7 @@
             :product="product"
           />
         </div>
+        <ScrollMobMenu />
 
       </div>
     </section>
@@ -31,6 +32,8 @@
 <script>
 import ProductsListCard from '~/components/products-list/ProductListCard'
 import ProductsListFilter from '~/components/products-list/ProductsListFilter'
+import ScrollMobMenu from '~/components/products-list/ScrollMobMenu'
+
 export default {
   head: {
     title: `Главная | ${process.env.appName}`
@@ -42,7 +45,8 @@ export default {
   },
   components: {
     ProductsListCard,
-    ProductsListFilter
+    ProductsListFilter,
+    ScrollMobMenu
   }
 }
 </script>

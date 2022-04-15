@@ -13,6 +13,7 @@
         <div class="row">
           <products-list-filter :categories="categories" />
         </div>
+        
         <div class="row">
           <products-list-card
             v-for="product in products" 
@@ -22,6 +23,7 @@
         </div>
       </div>
     </section>
+    <ScrollMobMenu />
   </div>
 </template>
 
@@ -29,6 +31,7 @@
 import HeaderSingle from '~/components/layouts/HeaderSingle'
 import ProductsListFilter from '~/components/products-list/ProductsListFilter'
 import ProductsListCard from '~/components/products-list/ProductListCard'
+import ScrollMobMenu from '~/components/products-list/ScrollMobMenu'
 export default {
   layout: 'single',
   data() {
@@ -57,7 +60,8 @@ export default {
   components: {
     HeaderSingle,
     ProductsListFilter,
-    ProductsListCard
+    ProductsListCard,
+    ScrollMobMenu
   }
 }
 </script>

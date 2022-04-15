@@ -22,7 +22,7 @@ module.exports = {
 
   css: [
     
-    // '@/theme/index.scss',
+    // '@/theme/index.scss',pla
     '@/assets/css/style.min.css',
     'element-ui/lib/theme-chalk/index.css',
   ],
