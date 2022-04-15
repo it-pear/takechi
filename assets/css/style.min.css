@@ -10837,8 +10837,13 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .flaticon-shopping-bag:before {
-    content: "\f19e";
+    content: "";
+    width: 30px;
+    height: 30px;
     color: white;
+    background: url(../img/cart.svg);
+    background-size: 30px 30px;
+    display: inline-block;
 }
 
 .flaticon-heart:before {
@@ -10919,7 +10924,13 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .navik-header-container {
-    position: relative
+    position: relative;
+}
+@media (max-width: 772px) {
+    .navik-header-container {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .tel-lg {
@@ -10959,7 +10970,6 @@ a.text-dark:focus, a.text-dark:hover {
     }
     .basket-mb {
         display: block;
-        margin-left: 15px;
     }
 }
 
@@ -11063,9 +11073,9 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .burger-menu {
-    position: absolute;
+    position: relative;
     top: 33px;
-    right: 14px;
+    right: 0;
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
@@ -14239,7 +14249,7 @@ body {
 }
 
 .bg-05 {
-    background-image: url(../images/bg-05.jpg);
+    background-image: url(../images/bg-05.png);
     background-attachment: fixed !important
 }
 
@@ -14297,7 +14307,7 @@ h5.h5-xs {
 }
 
 h5.h5-sm {
-    font-size: 1.375rem
+    font-size: 1rem
 }
 
 h5.h5-md {
@@ -14910,7 +14920,7 @@ span.item-code {
     font-size: 0.9rem;
     line-height: 1;
     font-weight: 700;
-    padding: 10px 14px;
+    padding: 7.5px 14px;
     border-radius: 4px;
     -webkit-transition: all 500ms ease-in-out;
     -o-transition: all 500ms ease-in-out;
@@ -15451,8 +15461,13 @@ span.ico-holder {
 }
 
 .basket-ico .ico-holder {
-   top: 4px;
+   display: flex;
+   align-items: center;
    position: relative;
+   height: 100%;
+}
+.basket-ico .ico-holder .flaticon-shopping-bag {
+    display: flex;
 }
 @media (max-width: 772px) {
     .basket-ico .ico-holder {
@@ -15474,7 +15489,7 @@ span.ico-holder {
     text-align: center;
     font-style: normal;
     position: absolute;
-    top: -10px;
+    top: 16px;
     right: -5px
 }
 
@@ -15936,6 +15951,9 @@ span.ico-holder {
     padding-top: 70px;
     padding-bottom: 30px
 }
+#about-7 .abox-4-ico img {
+    height: 80px;
+}
 
 .about-2-txt {
     padding: 0 30px
@@ -16015,10 +16033,11 @@ span.ico-holder {
 }
 
 .abox-4 h5 {
-    line-height: 1;
+    line-height: 1.2;
     letter-spacing: 0.5px;
     margin-top: 30px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .abox-4 p {
@@ -16659,6 +16678,19 @@ span.ico-holder {
     border-radius: 6px;
     margin-bottom: 30px
 }
+.menu-6-item .flaticon-shopping-bag:before {
+    content: "";
+    width: 17.5px;
+    height: 17.5px;
+    background-size: 17.5px 17.5px;
+}
+.menu-5-item, .menu-6-item .add-to-cart a{
+    display: flex;
+    align-items: center;
+}
+.menu-5-item, .menu-6-item .add-to-cart .flaticon-shopping-bag {
+    margin-right: 6px;
+}
 
 .menu-7-item {
     margin-bottom: 50px
@@ -16892,6 +16924,9 @@ span.ico-holder {
         overflow-y: scroll;
         overflow-x: hidden;
     }
+    #tabs-nav .tabs-1 .tab-link{
+        width: 100%;
+    }
 }
 
 .tab-content.current, .tab-content.displayed {
@@ -16931,10 +16966,29 @@ span.ico-holder {
     line-height: 1;
     font-weight: 500;
     margin-top: 15px;
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 @media (max-width: 772px) {
+    .tabs-1 li {
+        margin-bottom: 15px;
+        background-color: rgba(0, 0, 0, 0.05);
+        transition: all 0.25s;
+    }
+    .tabs-1 li:hover {
+        background-color: rgba(0, 0, 0, 0.07);
+    }
+    .tabs-1 li img {
+        margin-top: 10px;
+        min-height: 30px;
+    }
+    .tabs-1 li h5 {
+        line-height: 1;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    
     .tabs-1 li h5 {
         line-height: 2;
     }
@@ -19355,6 +19409,7 @@ nav a#pull {
         font-size: 20px;
         margin-bottom: 7px;
         color: white;
+        background: none;
     }
     .navik-menu ul li.basket-ico>a {
         margin-bottom: 10px
@@ -20187,7 +20242,7 @@ nav a#pull {
     }
     .navik-menu ul li>a, #header-3 .navik-menu ul li>a {
         font-size: 20px;
-        
+        background: none;
         margin-bottom: 7px
     }
     .navik-menu ul li.basket-ico>a {
@@ -21236,7 +21291,7 @@ nav a#pull {
     .navik-header .logo img {
         width: 60px;
         max-width: inherit;
-        max-height: 65px
+        max-height: 60px
     }
     .navik-menu {
         text-align: center
@@ -21247,6 +21302,7 @@ nav a#pull {
     .navik-menu ul li>a, #header-3 .navik-menu ul li>a {
         font-size: 20px;
         color: white;
+        background: none;
         margin-bottom: 7px
     }
     .navik-menu ul li.basket-ico>a {
@@ -21386,7 +21442,7 @@ nav a#pull {
         font-size: 1.5rem
     }
     h5.h5-lg {
-        font-size: 1.6rem
+        font-size: 1.2rem
     }
     h5.h5-xl {
         font-size: 1.6rem
@@ -23799,7 +23855,7 @@ nav a#pull {
         font-size: 1.5rem
     }
     h5.h5-lg {
-        font-size: 1.6rem
+        font-size: 1.2rem
     }
     h5.h5-xl {
         font-size: 1.6rem
@@ -26444,11 +26500,16 @@ nav a#pull {
         height: 0;
         overflow-y: hidden;
         transition: all 0.25s;
+        position: absolute;
+        left: -15px;
+        top: 80px;
+        width: 100vw;
     }
     .navik-menu-active {
         transition: all 0.25s;
         height: 80vh;
         display: block;
+        background: rgba(30, 48, 68, 1);
     }
     .navik-menu .top-list,
     .navik-menu-active .top-list {
@@ -26503,6 +26564,9 @@ nav a#pull {
     font-size: 38px;
     text-align: center;
 }
+.sentence .btn img {
+    max-width: 35px;
+}
 @media (max-width: 772px) {
     .sentence h1 {
         font-size: 28px;
@@ -26546,7 +26610,7 @@ nav a#pull {
         top: 4px;
     }
     .menu-section .menu-6-item .h5-sm{
-        font-size: 22px;
+        font-size: 20px;
         word-wrap: break-word;
         padding-right: 10px;
         margin-bottom: 18px;

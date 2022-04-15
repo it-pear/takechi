@@ -102,11 +102,11 @@
             <div class="col-md-4 col-lg-4">
               <div class="abox-4 text-center mb-40 white-color">
                 <div class="abox-4-ico">
-                  <span class="flaticon-sushi"></span>
+                  <img src="~/assets/img/original-resept.svg" alt="">
                 </div>
 
                 <h5 class="h5-lg">
-                  Оригинальные  рецепты
+                  Оригинальные рецепты
                 </h5>
 
                 <p>
@@ -119,7 +119,7 @@
             <div class="col-md-4 col-lg-4">
               <div class="abox-4 text-center mb-40 white-color">
                 <div class="abox-4-ico">
-                  <span class="flaticon-salad"></span>
+                  <img src="~/assets/img/garantia.svg" alt="">
                 </div>
 
                 <h5 class="h5-lg">
@@ -135,7 +135,7 @@
             <div class="col-md-4 col-lg-4">
               <div class="abox-4 text-center mb-40 white-color">
                 <div class="abox-4-ico">
-                  <span class="flaticon-moped"></span>
+                  <img src="~/assets/img/dostavka.svg" alt="">
                 </div>
 
                 <h5 class="h5-lg">
