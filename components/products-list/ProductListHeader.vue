@@ -33,7 +33,7 @@ export default {
       links: [
         {
           title: 'Меню',
-          link: '#menu-6'
+          link: ''
         },
         {
           title: 'О нас',

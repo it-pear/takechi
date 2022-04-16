@@ -14920,7 +14920,8 @@ span.item-code {
 
 .add-to-cart {
     opacity: 1;
-    position: absolute;
+    position: relative;
+    right: 0 !important;
     display: inline-block;
     font-size: 0.9rem;
     line-height: 1;
@@ -14929,7 +14930,9 @@ span.item-code {
     border-radius: 4px;
     -webkit-transition: all 500ms ease-in-out;
     -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out
+    transition: all 500ms ease-in-out;
+    float: right !important;
+
 }
 
 .add-to-cart.bg-red a, .add-to-cart.bg-meat a, .add-to-cart.bg-salmon a {
@@ -14956,7 +14959,7 @@ span.item-code {
 }
 
 .menu-6-item:hover .add-to-cart {
-    bottom: 28px;
+
     opacity: 1;
     -moz-opacity: 1
 }
@@ -16943,7 +16946,7 @@ span.ico-holder {
     cursor: pointer;
     background-color: transparent;
     color: #9f9f9f;
-    padding: 0 70px;
+    padding: 0 25px;
     border-bottom: none;
     margin: 0;
     -webkit-transition: all 450ms ease-in-out;
@@ -17087,8 +17090,9 @@ span.ico-holder {
 }
 
 .hover-overlay img {
-    max-width: 267px;
-    max-height: 234px;
+    width: 100%;
+    height: 234px;
+    object-fit: cover;
     transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
@@ -17109,13 +17113,20 @@ span.ico-holder {
     }
     .hover-overlay img {
         width: 100%;
+        
     }
 }
 
-@media (max-width: 772px) {
+@media (max-width: 992px) {
     .hover-overlay img {
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
+        height: 180px;
+    }
+}
+@media (max-width: 552px) {
+    .hover-overlay img {
+        width: 100%;
+        height: 160px;
     }
 }
 
@@ -18260,7 +18271,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 #footer-3.footer {
-    padding-bottom: 20px
+    padding-bottom: 20px;
+}
+@media (max-width: 772px) {
+    #footer-3.footer {
+        padding-bottom: 80px;
+    }
 }
 
 .footer.bg-red, .footer.bg-dark {
@@ -18720,7 +18736,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .add-to-cart-btn {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     font-size: 1.1rem;
     line-height: 1;
     font-weight: 700;
@@ -18732,6 +18749,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     -o-transition: all 500ms ease-in-out;
     transition: all 500ms ease-in-out;
     color: white;
+}
+.add-to-cart-btn .flaticon-shopping-bag {
+    margin-right: 7px;
 }
 
 .add-to-cart-btn.bg-yellow:hover {
@@ -19827,9 +19847,7 @@ nav a#pull {
         right: 10px;
         bottom: 0px
     }
-    .menu-6-item:hover .add-to-cart {
-        bottom: 20px
-    }
+
     .menu-3-img {
         padding: 0 5px
     }
@@ -20879,11 +20897,9 @@ nav a#pull {
     }
     .menu-6-txt .add-to-cart {
         right: 20px;
-        bottom: 20px
+        bottom: 0
     }
-    .menu-6-item:hover .add-to-cart {
-        bottom: 30px
-    }
+
     .menu-7-img .like-ico, .pbox-14-img .like-ico {
         top: 20px;
         right: 24px
@@ -26665,7 +26681,7 @@ a:hover {
         top: 0;
         left: 0;
         width: 100%;
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 6px 10px;
     }
     .menu-section .menu-6-price h5,
@@ -26685,7 +26701,7 @@ a:hover {
         padding: 8px 8px;
     }
     .menu-section .add-to-cart {
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 6px 10px;
     }
     .menu-section .menu-6-price h5, 

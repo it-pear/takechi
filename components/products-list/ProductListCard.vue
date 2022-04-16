@@ -32,13 +32,15 @@
           </div>
 
           <h5 class="h5-sm">{{ product.title }}</h5>
-          <div class="menu-6-price bg-salmon">
+          <div>
+            <div class="menu-6-price bg-salmon">
             <h5 class="h5-xs white-color">{{ product.price }} ₽</h5>
-          </div>
-          <div class="add-to-cart bg-yellow ico-10">
-            <a @click.prevent="addToCartInlist"
-              ><span class="flaticon-shopping-bag"></span> Добавить</a
-            >
+            </div>
+            <div class="add-to-cart bg-yellow ico-10">
+              <a @click.prevent="addToCartInlist"
+                ><span class="flaticon-shopping-bag"></span> Хочу</a
+              >
+            </div>
           </div>
         </div>
       </div>

@@ -73,8 +73,9 @@ export default {
         max-width: max-content;
         margin: 0 0;
         a {
-          padding: 5px 15px;
+          padding: 15px 15px;
           display: block;
+          font-weight: 500;
           color: white;
           &.nuxt-link-active {
             background: rgba(191, 22, 43, 1);

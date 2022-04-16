@@ -10,7 +10,7 @@
               class="tab-link"
               :class="{ 'current': $route.params.category === `${category._id}` }"
             >
-              <nuxt-link :to="`/category/${category._id}#menu-products`">
+              <nuxt-link :to="`/category/${category._id}`">
                 <img class="categoryimg" :src="`${category.imageUrl}`" alt="">
                 <h5 class="h5-sm">
                   {{ category.title }}

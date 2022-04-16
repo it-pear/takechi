@@ -46,6 +46,10 @@ export default {
       title: `Каталог | ${this.category.title}`
     }
   },
+  mounted() {
+    let menu = document.querySelector('#tabs-nav').offsetTop + 200
+    window.scrollTo(0,menu)
+  },
   async asyncData({store, params}) { 
     const category = await store.dispatch('category/fetchById', params.id)
     await store.dispatch('category/addView', category)

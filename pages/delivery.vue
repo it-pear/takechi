@@ -3,18 +3,260 @@
     <br>
     <br>
     <br>
+    <section id="about-7" class="bg-05 about-section division">
+      <div class="container">
+        <div class="abox-4-wrapper ico-80">
+          <div class="row">
+
+            <div class="col-md-4 col-lg-4">
+              <div class="abox-4 text-center mb-40 white-color">
+                <div class="abox-4-ico">
+                  <img src="~/assets/img/van.svg" alt="">
+                </div>
+                <h5 class="h5-lg">
+                  Доставка
+                </h5>
+                <p>
+                  Быстрая адресная доставка по Геленджику и району от 45 минут.<br>
+                  Только свежие блюда.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+              <div class="abox-4 text-center mb-40 white-color">
+                <div class="abox-4-ico">
+                  <img src="~/assets/img/dostavka.svg" alt="">
+                </div>
+                <h5 class="h5-lg">
+                  Самовывоз
+                </h5>
+                <p>
+                  Возможность самовывоза через 30 минут после подтверждения заказа.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+              <div class="abox-4 text-center mb-40 white-color">
+                <div class="abox-4-ico">
+                  <img src="~/assets/img/money.svg" alt="">
+                </div>
+
+                <h5 class="h5-lg">
+                  Оплата
+                </h5>
+
+                <p>
+                  Наличными курьеру <br>
+                  Наличными и банковской картой при самовывозе.
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr style="border-color: white;">
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-md-4 col-lg-4">
+              <div class="abox-4 text-center mb-40 white-color">
+                <div class="abox-4-ico">
+                  <img src="~/assets/img/discount2.svg" alt="">
+                </div>
+                <h5 class="h5-lg">
+                  Бесплатная доставка
+                </h5>
+                <p>
+                  <b>•	от 800 руб. по Геленджику;</b><br>
+                  <b>•	от 2000 руб. по Геленджикскому району.</b><br>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+              <div class="abox-4 text-center mb-40 white-color">
+                <div class="abox-4-ico">
+                  <img src="~/assets/img/samovivos.svg" alt="">
+                </div>
+                <h5 class="h5-lg">
+                  Стоимость доставки по Геленджику
+                </h5>
+                <p>
+                  При сумме заказа до 800 руб. — 100 руб.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+              <div class="abox-4 text-center mb-40 white-color">
+                <div class="abox-4-ico">
+                  <img src="~/assets/img/samovivos.svg" alt="">
+                </div>
+
+                <h5 class="h5-lg">
+                  Стоимость доставки по району
+                </h5>
+
+                <p>
+                  При сумме заказа до 2000 руб.:<br>
+                  •	100 руб. по Геленджику;<br>
+                  •	300 руб. в Кабардинку;<br>
+                  •	250 руб. в Марьину рощу, Голубую бухту, Виноградный и Дивноморское;<br>
+                  •	200 руб. в Тонкий мыс;<br>
+                  •	150 руб. в Нахаловку, северный авторынок, Кубанскую марку.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="about-3" class="bg-lightgrey wide-60 about-section division">
       <div class="container">
         <div class="row d-flex align-items-center">
-          <!-- <div class="col-md-5 col-lg-6">
-            <div class="about-3-img text-center mb-40">
-              <img
-                class="img-fluid"
-                src="images/about-04-img-1.png"
-                alt="about-image"
-              />
+          <div class="col-md-12 col-lg-12 text-center">
+            <div class="about-3-txt mb-40">
+              <h2 class="h2-sm">
+                Доставка и оплата Takeshi
+                </h2>
+
+              <p class="p-md">
+                Takeshi предлагает заказать с доставкой блюда японской, итальянской кухни и напитки. На нашем сайте вы сможете выбрать вкусные роллы, суши, пиццу, салаты и пр.
+              </p>
+
+              <h4>Среди преимуществ Takeshi:</h4>
+              <ul class="txt-list" style="list-style: none;">
+                <li class="list-item">
+                  <p class="p-md">
+                    использование для приготовления качественных, свежих ингредиентов;
+                  </p>
+                </li>
+
+                <li class="list-item">
+                  <p class="p-md">
+                    быстрая доставка по Геленджику и Геленджикскому району — от 45 минут;
+                  </p>
+                </li>
+
+                <li class="list-item">
+                  <p class="p-md">
+                    бесплатная доставка при заказе от 800 руб.;
+                  </p>
+                </li>
+                <li class="list-item">
+                  <p class="p-md">
+                    большой ассортимент готовых блюд для повседневного и праздничного стола.
+                  </p>
+                </li>
+              </ul>
+              <p class="p-md">
+                Обратите внимание, в праздничные дни и часы пик время доставки может увеличиться. Надеемся на ваше понимание. 
+              </p>
+              <h4>В стандартный набор суши и роллов входит:</h4>
+              <ul class="txt-list" style="list-style: none;">
+                <li class="list-item">
+                  <p class="p-md">
+                    имбирь;
+                  </p>
+                </li>
+
+                <li class="list-item">
+                  <p class="p-md">
+                    соевый соус;
+                  </p>
+                </li>
+
+                <li class="list-item">
+                  <p class="p-md">
+                    васаби.
+                  </p>
+                </li>
+              </ul>
+              <p class="p-md">
+                При оформлении заказа, мы учитываем количество персон. Также каждый заказ включает бамбуковые палочки и салфетки.
+              </p>
+              <h4>Время работы</h4>
+              <p class="p-md">
+                Мы работаем ежедневно. С понедельника по четверг и в воскресенье: с 11:00 до 23:00, в пятницу и субботу: с 11:00 до 00:00. 
+              </p>
+              <h4>Доставка</h4>
+              <p class="p-md">
+                Мы производим доставку суши, пиццы и других блюд из меню по Геленджику и Геленджикскому району. Ее стоимость зависит от адреса и суммы заказа. Чтобы воспользоваться бесплатной доставкой, минимальная сумма заказа составляет: 
+              </p>
+              <ul class="txt-list" style="list-style: none;">
+                <li class="list-item">
+                  <p class="p-md">
+                    800 руб. по Геленджику;
+                  </p>
+                </li>
+
+                <li class="list-item">
+                  <p class="p-md">
+                    2000 руб. по Геленджикскому району.
+                  </p>
+                </li>
+              </ul>
+              <h4>Если сумма заказа меньше указанной, стоимость доставки:</h4>
+              <ul class="txt-list" style="list-style: none;">
+                <li class="list-item">
+                  <p class="p-md">
+                    100 руб. по Геленджику;
+                  </p>
+                </li>
+
+                <li class="list-item">
+                  <p class="p-md">
+                    300 руб. в Кабардинку;
+                  </p>
+                </li>
+                <li class="list-item">
+                  <p class="p-md">
+                    250 руб. в Марьину рощу, Голубую бухту, Виноградный и Дивноморское;
+                  </p>
+                </li>
+                <li class="list-item">
+                  <p class="p-md">
+                    200 руб. в Тонкий мыс;
+                  </p>
+                </li>
+                <li class="list-item">
+                  <p class="p-md">
+                    150 руб. в Нахаловку, северный авторынок, Кубанскую марку.
+                  </p>
+                </li>
+              </ul>
+              <p class="p-md">
+                Также вы можете забрать заказ самовывозом. 
+              </p>
+              <h4>Оплата заказа</h4>
+              <p class="p-md">
+                Мы предлагаем удобные способы оплаты:
+              </p>
+              <ul class="txt-list" style="list-style: none;">
+                <li class="list-item">
+                  <p class="p-md">
+                    Наличными курьеру при получении.
+                  </p>
+                </li>
+
+                <li class="list-item">
+                  <p class="p-md">
+                    Банковской картой или наличными при самовывозе.
+                  </p>
+                </li>
+                
+              </ul>
             </div>
-          </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <Sales />
+
+    <section id="about-3" class="bg-lightgrey wide-60 about-section division">
+      <div class="container">
+        <div class="row d-flex align-items-center">
 
           <div class="col-md-12 col-lg-12 text-center">
             <div class="about-3-txt mb-40">
@@ -138,64 +380,7 @@
       </div>
     </section>
 
-    <section id="about-7" class="bg-05 about-section division">
-      <div class="container">
-        <div class="abox-4-wrapper ico-80">
-          <div class="row">
-            <div class="col-md-4 col-lg-4">
-              <div class="abox-4 text-center mb-40 white-color">
-                <div class="abox-4-ico">
-                  <img src="~/assets/img/original-resept.svg" alt="">
-                </div>
-
-                <h5 class="h5-lg">
-                  Оригинальные рецепты
-                </h5>
-
-                <p>
-                  Подаем известные блюда в интересных вариантах. Вы откроете для
-                  себя новые вкусы и ароматы.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-lg-4">
-              <div class="abox-4 text-center mb-40 white-color">
-                <div class="abox-4-ico">
-                  <img src="~/assets/img/garantia.svg" alt="">
-                </div>
-
-                <h5 class="h5-lg">
-                  100% гарантия свежести, качества и безопасности продуктов
-                </h5>
-
-                <p>
-                  Мы гарантируем качество наших блюд, вы можете не волноваться!
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-lg-4">
-              <div class="abox-4 text-center mb-40 white-color">
-                <div class="abox-4-ico">
-                  <img src="~/assets/img/dostavka.svg" alt="">
-                </div>
-
-                <h5 class="h5-lg">
-                  Быстрая доставка за 60 минут после оплаты заказа
-                </h5>
-
-                <p>
-                  Заказы принимаются ежедневно с 10:30 до 00:00. Приготовление
-                  блюд начинается после приема заявки и уточнения количества
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <Sales />
+    
   </div>
 </template>
 
