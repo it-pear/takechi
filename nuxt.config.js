@@ -37,13 +37,13 @@ module.exports = {
   ],
 
   axios: {
-    // baseURL: 'http://takeshigel.ru'
+    baseURL: 'http://takeshigel.ru'
   },
 
   env: {
     appName: 'takeshigel.ru',
     port: 8080,
-    // baseURL: 'http://takeshigel.ru'
+    baseURL: 'http://takeshigel.ru'
   },
 
   build: {
