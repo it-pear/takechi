@@ -16894,7 +16894,12 @@ span.ico-holder {
 .menu-6-price {
     display: inline-block;
     padding: 7px 12px;
-    border-radius: 4px
+    border-radius: 4px;
+    background: none;
+    border: 1px solid rgba(30, 48, 68, 1);
+}
+.menu-6-price .h5-xs {
+    color: rgba(30, 48, 68, 1);
 }
 
 .menu-7-price {

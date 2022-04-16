@@ -389,7 +389,16 @@
 import Sales from '~/components/layouts/Sales'
 export default {
   layout: 'single',
-  
+  head: {
+    title: `Доставка блюд японской и итальянской кухни в Геленджике. Takeshi — богатый выбор вкусных блюд | ${process.env.appName}`,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'это быстрая доставка еды по Геленджику и району. Воспользуйтесь выгодным предложением — бесплатной доставкой при заказе от 800 руб. в Геленджике и от 2000 руб. в Геленджикском районе'
+      }
+    ],
+  },
   head() {
     return {
       title: `О нас`

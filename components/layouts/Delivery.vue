@@ -10,12 +10,7 @@
             </p>
             <a href="tel:89003510000" class="btn btn-lg btn-red tra-red-hover">8 (900) 351-00-00</a>
           </div> 
-          <div class="text-center">
-            <a href="/#menu-6" class="btn btn-lg btn-red tra-red-hover" style="margin-top: 14px;padding: 7px 20px !important;">
-              Смотреть меню
-              <img src="~/assets/img/watch-menu.svg" alt="">
-            </a>
-          </div>
+          
           
         </div>
       </div> 

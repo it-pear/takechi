@@ -36,7 +36,14 @@ import ScrollMobMenu from '~/components/products-list/ScrollMobMenu'
 
 export default {
   head: {
-    title: `Главная | ${process.env.appName}`
+    title: `Доставка суши, роллов, пиццы, напитков в Геленджике. Честные цены, выгодные условия | ${process.env.appName}`,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Доставка суши, роллов и пиццы в Геленлжике и Геленджикском районе. Свежие, вкусные блюда на вашем столе от Takeshi без перерывов и выходных. Выгодные цены и бесплатная доставка от 800 руб'
+      }
+    ],
   },
   async asyncData({store}) {
     const products = await store.dispatch('post/fetch')
