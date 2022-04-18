@@ -33,7 +33,17 @@ module.exports = {
   ],
 
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    [
+      '@nuxtjs/yandex-metrika',
+      {
+        id: '88418948',
+        clickmap:true, 
+        trackLinks:true, 
+        accurateTrackBounce:true, 
+        webvisor:true 
+      }
+    ]
   ],
 
   axios: {
