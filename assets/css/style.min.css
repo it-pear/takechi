@@ -18714,6 +18714,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .product-txt ul.txt-list li p {
     margin-bottom: 3px
 }
+.product-txt p{
+    font-weight: 500 !important;
+    color: black !important;
+    opacity: 1 !important;
+}
 
 .product-info h5 {
     margin-bottom: 20px
@@ -21344,7 +21349,7 @@ nav a#pull {
         padding-right: 15px
     }
     .basket-ico em.roundpoint {
-        top: -6px
+        top: 11px
     }
     .callusbtn {
         display: block

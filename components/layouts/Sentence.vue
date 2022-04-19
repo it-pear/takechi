@@ -6,6 +6,7 @@
         <div class="sentence"> 
           <img src="~/assets/images/divider-05.jpg" class="fon" alt="">
           <div class="content">
+            <img src="~/assets/img/slide11.png" alt="" class="img-action" style="opacity: 0;">
             <h1>Доставка роллов и суши в Геленджике</h1>
             <a href="/#menu-6" class="btn btn-lg btn-red tra-red-hover">
               Смотреть меню
@@ -100,12 +101,19 @@ export default {
       position: absolute;
       background-color: rgba(17,15,16,0.4);
     }
+    @media (max-width: 772px) {
+      top: -10vh;
+      &:before {
+        top: 10vh;
+      }
+    }
     .img-action {
       width: max-content;
       height: 85px;
       z-index: 1;
       margin: 0 auto;
       margin-bottom: 15px;
+      image-rendering: -webkit-optimize-contrast;
     }
     h1,
     h2 {
