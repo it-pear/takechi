@@ -4,7 +4,9 @@
       <el-breadcrumb-item to="/admin/list">Посты</el-breadcrumb-item>
       <el-breadcrumb-item>{{post.title}}</el-breadcrumb-item>
     </el-breadcrumb>
-
+  <!-- {{post.images}} -->
+  
+  <!-- <img :src='"/"+post.images[1].filname' alt=""> -->
     <el-form
       :model="controls"
       :rules="rules"
@@ -12,7 +14,14 @@
       @submit.native.prevent="onSubmit"
     >
       <!-- <h1>Вход</h1> -->
-
+      <el-form-item label="Текст в формате .md или .html" prop="title">
+        <el-input
+          type="input"
+          v-model.trim="controls.title"
+          resize="none"
+          :rows="10"
+        />
+      </el-form-item>
       <el-form-item label="Текст в формате .md или .html" prop="text">
         <el-input
           type="textarea"
@@ -21,36 +30,71 @@
           :rows="10"
         />
       </el-form-item>
-      <el-form-item label="Картинка" prop="text" class="el-form-item-image">
-        <img :src='image' alt="">
-        <el-button
-          type="danger"
-          round
-          :loading="loading"
-          @click="delImage"
-        >
-          Удалить картинку
-        </el-button>
-        <br>
+      <br>
+      <label>Галерея Картинок</label>
+      <ul class="img-collection" style="display: flex;">
+        <li v-for="img in post.images" :key="img.filname">
+          <img :src="`/${img.filname}`" alt="">
+        </li>
+      </ul>
+      <el-form-item prop="images" style="margin-top: 20px;">
         <el-upload
           drag
           ref="upload"
           action="https://jsonplaceholder.typicode.com/posts/"
-          :on-change="handleImageChange"  
+            
           :auto-upload="false"
         >
           <i class="el-icon-upload"></i>
-          <div class="el-upload__text">Перетащите картинку <em>или нажмите</em></div>
+          <div class="el-upload__text">Перетащите картинки <em>или нажмите</em></div>
           <div class="el-upload__tip" slot="tip">Файлы с расширением jpg/png</div>
         </el-upload>
         <el-button
-          type="warning"
+          type="danger"
           round
           :loading="loading"
-          @click="uploudmage"
         >
-          Обновить картинку
+          Удалить картинки
         </el-button>
+      </el-form-item>
+      <br>
+      <el-form-item label="Главная Картинка" prop="text" class="el-form-item-image">
+        <div style="display: flex;">
+          <div>
+            <img :src='image' alt="">
+            <el-button
+              type="danger"
+              round
+              :loading="loading"
+              @click="delImage"
+            >
+              Удалить картинку
+            </el-button>
+          </div>
+          <div>
+            <el-upload
+              drag
+              ref="upload"
+              action="https://jsonplaceholder.typicode.com/posts/"
+              :on-change="handleImageChange"  
+              :auto-upload="false"
+            >
+              <i class="el-icon-upload"></i>
+              <div class="el-upload__text">Перетащите картинку <em>или нажмите</em></div>
+              <div class="el-upload__tip" slot="tip">Файлы с расширением jpg/png</div>
+            </el-upload>
+            <el-button
+              type="warning"
+              round
+              :loading="loading"
+              @click="uploudmage"
+            >
+              Обновить картинку
+            </el-button>
+          </div>
+        </div>
+        <br>
+        
       </el-form-item>
       <br>
       <div class="mb">
@@ -104,7 +148,8 @@ export default {
       post: [],
       image: null,
       controls: {
-        text: ''
+        text: '',
+        title: ''
       },
       rules: {
         text: [
@@ -115,6 +160,7 @@ export default {
   },
   mounted() {
     this.controls.text = this.post.text
+    this.controls.title = this.post.title
     this.image = this.post.imageUrl
   },
   methods: {
@@ -177,6 +223,7 @@ export default {
           
           const formData = {
             text: this.controls.text,
+            title: this.controls.title,
             id: this.post._id
           }
           
@@ -214,6 +261,15 @@ export default {
     }
     button {
       margin-top: 14px;
+    }
+  }
+  .img-collection {
+    li {
+      max-width: 150px;
+      margin-right: 10px;
+      img {
+        max-width: 100%;
+      }
     }
   }
 }

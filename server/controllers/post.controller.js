@@ -47,7 +47,8 @@ module.exports.getById = async (req, res) => {
 
 module.exports.update = async (req, res) => {
   const $set = {
-    text: req.body.text
+    text: req.body.text, 
+    title: req.body.title
     // imageUrl: `/${req?.file?.filename}`
   }
   try {

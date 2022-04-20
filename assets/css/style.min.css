@@ -26590,6 +26590,7 @@ nav a#pull {
 
 .menu-section .menu-6-item .h5-sm{
     padding-right: 20px;
+    text-transform: capitalize;
 }
 .menu-section .h5-sm{
     color: rgba(17, 15, 16, 1);

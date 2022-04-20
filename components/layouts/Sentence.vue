@@ -109,6 +109,7 @@ export default {
     }
     .img-action {
       width: max-content;
+      max-width: 139px;
       height: 85px;
       z-index: 1;
       margin: 0 auto;
