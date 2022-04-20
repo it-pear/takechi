@@ -18,9 +18,17 @@ router.post(
 router.post(
   '/uploudImages/:id',
   passport.authenticate('jwt', {session: false}),
-  upload.single('image'),
-  ctr.uploudImage,
+  upload.fields([
+    { name: 'images', maxCount: 10 }
+  ]),
+  ctr.uploudImages,
 )
+// router.post(
+//   '/uploudImages/:id',
+//   passport.authenticate('jwt', {session: false}),
+//   upload.single('image'),
+//   ctr.uploudImage,
+// )
 
 router.get(
   '/admin/',

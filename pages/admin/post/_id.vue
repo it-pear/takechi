@@ -43,9 +43,10 @@
       <el-form-item prop="images" style="margin-top: 20px;">
         <el-upload
           drag
+          multiple
           ref="upload"
           action="https://jsonplaceholder.typicode.com/posts/"
-            
+          :on-change="handleImagesChange"
           :auto-upload="false"
         >
           <i class="el-icon-upload"></i>
@@ -53,13 +54,21 @@
           <div class="el-upload__tip" slot="tip">Файлы с расширением jpg/png</div>
         </el-upload>
         <el-button
+          type="warning"
+          round
+          :loading="loading"
+          @click="uploudImages"
+        >
+          Обновить картинки
+        </el-button>
+        <!-- <el-button
           type="danger"
           round
           :loading="loading"
           @click="delImages"
         >
           Удалить картинки
-        </el-button>
+        </el-button> -->
       </el-form-item>
       <br>
       <el-form-item label="Главная Картинка" prop="text" class="el-form-item-image">
@@ -196,6 +205,30 @@ export default {
               
               // return this.image = post
             this.$message.success('картинка обновлена')
+            this.loading = false
+          } catch (e) {
+            this.$message.warning('что то пошло не так, попробуйте позже')
+            this.loading = false
+          }
+        }
+      })   
+    },
+    uploudImages() {
+      this.$refs.form.validate(async valid => {
+        if (valid && this.images) {
+          this.loading = true
+          const formData = {
+            images: this.images,
+            id: this.post._id
+          }
+          // console.log(post)
+          try {
+            await this.$store.dispatch('post/uploudImages', formData)
+            const post = await this.$store.dispatch('post/fetchAdminById', formData.id)
+            this.images = post.images
+              
+              // return this.image = post
+            this.$message.success('картинки обновлены')
             this.loading = false
           } catch (e) {
             this.$message.warning('что то пошло не так, попробуйте позже')

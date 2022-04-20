@@ -46,6 +46,19 @@ export const actions = {
       throw e
     }
   },
+  async uploudImages({commit}, {id, images}) {
+    try {
+      const fd = new FormData()
+      for( var i = 0; i < images.length; i++ ){
+        let file = images[i].raw;
+        fd.append('images', file);
+      }
+      return await this.$axios.$post(`/api/post/uploudImages/${id}`, fd)
+    } catch (e) {
+      commit('setError', e, {root: true})
+      throw e
+    }
+  },
   async updateImage({commit}, {id, imageUrl}) {
     try {
       return await this.$axios.$put(`/api/post/updateImage/${id}`, {imageUrl})

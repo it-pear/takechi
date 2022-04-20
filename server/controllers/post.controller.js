@@ -62,10 +62,31 @@ module.exports.update = async (req, res) => {
     res.status(500).json(e)
   }
 }
+
 module.exports.uploudImage = async (req, res) => {
   const $set = {
     imageUrl: `/${req.file.filename}`
   }
+  try {
+    const post = await Post.findOneAndUpdate({
+      _id: req.params.id
+    }, {$set}, {new: true})
+    res.json(post)
+  } catch (e) {
+    res.status(500).json(e)
+  }
+}
+
+module.exports.uploudImages = async (req, res) => {
+  const imagesUrls = req.files.images.map((item) => {
+    return {
+      filname: item.filename
+    }
+  })
+  const $set = {
+    images: imagesUrls
+  }
+  
   try {
     const post = await Post.findOneAndUpdate({
       _id: req.params.id
@@ -92,7 +113,7 @@ module.exports.updateImage = async (req, res) => {
 
 module.exports.updateImages = async (req, res) => {
   const $set = {
-    images: req.body.images
+    images: req.body.imageUrl
   }
   try {
     const post = await Post.findOneAndUpdate({
