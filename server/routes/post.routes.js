@@ -51,6 +51,11 @@ router.put(
   ctr.updateImage
 )
 router.put(
+  '/updateImages/:id',
+  passport.authenticate('jwt', {session: false}), 
+  ctr.updateImages
+)
+router.put(
   '/uploudImages/:id',
   passport.authenticate('jwt', {session: false}),
   upload.single('image'),

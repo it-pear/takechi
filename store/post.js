@@ -28,9 +28,9 @@ export const actions = {
       throw e
     }
   },
-  async update({commit}, {id, text, title}) {
+  async update({commit}, {id, text, title, recommend}) {
     try {
-      return await this.$axios.$put(`/api/post/admin/${id}`, {text, title})
+      return await this.$axios.$put(`/api/post/admin/${id}`, {text, title, recommend})
     } catch (e) {
       commit('setError', e, {root: true})
       throw e
@@ -54,17 +54,17 @@ export const actions = {
       throw e
     }
   },
-  async uploudImages({commit}, {id, image}) {
+  async updateImages({commit}, {id, images}) {
     try {
       const fd = new FormData()
-      fd.append('image', image, image.name)
-      return await this.$axios.$put(`/api/post/uploudImage/${id}`, fd)
+      fd.append('image', images)
+      return await this.$axios.$put(`/api/post/updateImages/${id}`, fd)
     } catch (e) {
       commit('setError', e, {root: true})
       throw e
     }
   },
-  async create ({commit}, {title, text, price, category, categoryname, image, images}) {
+  async create ({commit}, {title, text, price, category, categoryname, image, images, recommend}) {
 
     try {
       const fd = new FormData()
@@ -74,6 +74,7 @@ export const actions = {
       fd.append('category', category)
       fd.append('categoryname', categoryname)
       fd.append('image', image)
+      fd.append('recommend', recommend)
       for( var i = 0; i < images.length; i++ ){
         let file = images[i].raw;
         fd.append('images', file);

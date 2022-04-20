@@ -15,7 +15,8 @@ module.exports.create = async (req, res) => {
     category: req.body.category,
     categoryname: req.body.categoryname,
     imageUrl: `/${req.files.image[0].filename}`,
-    images: imagesUrls
+    images: imagesUrls,
+    recommend: req.body.recommend
   })
 
   try {
@@ -48,7 +49,8 @@ module.exports.getById = async (req, res) => {
 module.exports.update = async (req, res) => {
   const $set = {
     text: req.body.text, 
-    title: req.body.title
+    title: req.body.title,
+    recommend: req.body.recommend
     // imageUrl: `/${req?.file?.filename}`
   }
   try {
@@ -77,6 +79,20 @@ module.exports.uploudImage = async (req, res) => {
 module.exports.updateImage = async (req, res) => {
   const $set = {
     imageUrl: req.body.imageUrl
+  }
+  try {
+    const post = await Post.findOneAndUpdate({
+      _id: req.params.id
+    }, {$set}, {new: true})
+    res.json(post)
+  } catch (e) {
+    res.status(500).json(e)
+  }
+}
+
+module.exports.updateImages = async (req, res) => {
+  const $set = {
+    images: req.body.images
   }
   try {
     const post = await Post.findOneAndUpdate({

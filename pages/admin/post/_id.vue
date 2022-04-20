@@ -30,10 +30,13 @@
           :rows="10"
         />
       </el-form-item>
+      <el-form-item label="Популярный товар" prop="recommend">
+        <el-checkbox v-model="controls.recommend"><small>(отметьте если надо вывести товар на главной странице)</small></el-checkbox>
+      </el-form-item>
       <br>
       <label>Галерея Картинок</label>
       <ul class="img-collection" style="display: flex;">
-        <li v-for="img in post.images" :key="img.filname">
+        <li v-for="img in images" :key="img.filname">
           <img :src="`/${img.filname}`" alt="">
         </li>
       </ul>
@@ -53,6 +56,7 @@
           type="danger"
           round
           :loading="loading"
+          @click="delImages"
         >
           Удалить картинки
         </el-button>
@@ -147,9 +151,11 @@ export default {
       loading: false,
       post: [],
       image: null,
+      images: [],
       controls: {
         text: '',
-        title: ''
+        title: '',
+        recommend: false
       },
       rules: {
         text: [
@@ -161,11 +167,18 @@ export default {
   mounted() {
     this.controls.text = this.post.text
     this.controls.title = this.post.title
+    if (this.post.recommend != '') {
+      this.controls.recommend = this.post.recommend
+    }
     this.image = this.post.imageUrl
+    this.images = this.post.images
   },
   methods: {
     handleImageChange(file) {
       this.image = file.raw 
+    },
+    handleImagesChange(file, fileLiset) {
+      this.images = fileLiset
     },
     uploudmage() {
       this.$refs.form.validate(async valid => {
@@ -175,7 +188,6 @@ export default {
             image: this.image,
             id: this.post._id
           }
-          
           // console.log(post)
           try {
             await this.$store.dispatch('post/uploudImage', formData)
@@ -216,6 +228,30 @@ export default {
         }
       })
     },
+    delImages() {
+      this.$refs.form.validate(async valid => {
+        if (valid && this.images) {
+          this.loading = true
+          
+          const formData = {
+            images: null,
+            id: this.post._id
+          }
+          
+          try {
+            await this.$store.dispatch('post/updateImages', formData)
+            
+            this.$message.success('картинки удалены')
+            this.loading = false
+            this.images = null
+          } catch (e) {
+            this.$message.warning('что то пошло не так, попробуйте позже')
+            this.loading = false
+          }
+          
+        }
+      })
+    },
     onSubmit() {
       this.$refs.form.validate(async valid => {
         if (valid) {
@@ -224,6 +260,7 @@ export default {
           const formData = {
             text: this.controls.text,
             title: this.controls.title,
+            recommend: this.controls.recommend,
             id: this.post._id
           }
           

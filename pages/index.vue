@@ -16,7 +16,7 @@
 
         <div class="row">
           <products-list-card
-            v-for="product in products.slice(0, 8)" 
+            v-for="product in filteredPosts.slice(0, 8)" 
             :key="product._id"
             :product="product"
           />
@@ -54,6 +54,11 @@ export default {
     ProductsListCard,
     ProductsListFilter,
     ScrollMobMenu
+  },
+  computed: {
+    filteredPosts() {
+      return this.products.filter(p => p.recommend === true)
+    }
   }
 }
 </script>

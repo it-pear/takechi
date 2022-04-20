@@ -46,6 +46,10 @@
         </el-select>
       </el-form-item>
 
+      <el-form-item label="Популярный товар" prop="recommend">
+        <el-checkbox v-model="controls.recommend"><small>(отметьте если надо вывести товар на главной странице)</small></el-checkbox>
+      </el-form-item>
+
       <el-dialog title="Предпросмотр" :visible.sync="previewDialog">
         <div :key="controls.text">
           <vue-markdown>{{controls.text}}</vue-markdown> 
@@ -107,7 +111,8 @@ export default {
         title: '',
         text: '',
         price: '',
-        category: ''
+        category: '',
+        recommend: false
       },
       rules: {
         text: [
@@ -155,6 +160,7 @@ export default {
             categoryname: this.categoryname,
             image: this.image,
             images: this.images,
+            recommend: this.controls.recommend
           }
   
           try {
@@ -163,13 +169,14 @@ export default {
             this.controls.text = ''
             this.controls.price = ''
             this.controls.category = ''
+            this.controls.recommend = false
             this.image = null
             this.$refs.upload.clearFiles()
             this.$refs.uploads.clearFiles()
             this.$message.success('Пост создан')
           } catch (e) {} finally {
             this.loading = false
-            this.$message.success('Пост создан')
+            // this.$message.success('Пост создан')
           }
         } else {
           this.$message.warning('Форма не валидна')

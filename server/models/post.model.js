@@ -34,6 +34,10 @@ const postSchema = new Schema({
     type: Array,
     required: true
   },
+  recommend: {
+    type: Boolean,
+    required: true
+  },
   comments: [
     {
       type: Schema.Types.ObjectId,
