@@ -20,7 +20,9 @@
                 <h2 class="h2-lg"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ product.title }}</font></font></h2>
                 <!-- Price -->
                 <div class="project-price">
-                  <h4 v-if="product.oldprice != ''"><small>Цена без скидки: <s>{{product.oldprice}}</s> ₽ублей </small></h4>
+                  <h4>
+                    <small v-show="product.oldprice != null">Цена без скидки: <s>{{product.oldprice}}</s> ₽ублей</small>
+                  </h4>
                   <h4 class="h4-xl yellow-color">
                     <font style="vertical-align: inherit;">
                       <font style="vertical-align: inherit;">
