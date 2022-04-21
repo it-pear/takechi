@@ -14,10 +14,18 @@
       @submit.native.prevent="onSubmit"
     >
       <!-- <h1>Вход</h1> -->
-      <el-form-item label="Текст в формате .md или .html" prop="title">
+      <el-form-item label="Текст" prop="title">
         <el-input
           type="input"
           v-model.trim="controls.title"
+          resize="none"
+          :rows="10"
+        />
+      </el-form-item>
+      <el-form-item label="Цена без скидки (только цифры)" prop="oldprice">
+        <el-input
+          type="number"
+          v-model.trim="controls.oldprice"
           resize="none"
           :rows="10"
         />
@@ -164,7 +172,8 @@ export default {
       controls: {
         text: '',
         title: '',
-        recommend: false
+        recommend: false,
+        oldprice: ''
       },
       rules: {
         text: [
@@ -176,6 +185,7 @@ export default {
   mounted() {
     this.controls.text = this.post.text
     this.controls.title = this.post.title
+    this.controls.oldprice = this.post.oldprice
     if (this.post.recommend != '') {
       this.controls.recommend = this.post.recommend
     }
@@ -294,6 +304,7 @@ export default {
             text: this.controls.text,
             title: this.controls.title,
             recommend: this.controls.recommend,
+            oldprice: this.controls.oldprice,
             id: this.post._id
           }
           

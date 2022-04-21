@@ -16,7 +16,8 @@ module.exports.create = async (req, res) => {
     categoryname: req.body.categoryname,
     imageUrl: `/${req.files.image[0].filename}`,
     images: imagesUrls,
-    recommend: req.body.recommend
+    recommend: req.body.recommend,
+    // oldprice: req.body.oldprice
   })
 
   try {
@@ -50,7 +51,8 @@ module.exports.update = async (req, res) => {
   const $set = {
     text: req.body.text, 
     title: req.body.title,
-    recommend: req.body.recommend
+    recommend: req.body.recommend,
+    oldprice: req.body.oldprice,
     // imageUrl: `/${req?.file?.filename}`
   }
   try {

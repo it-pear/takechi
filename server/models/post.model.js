@@ -13,6 +13,10 @@ const postSchema = new Schema({
     type: Number,
     required: true
   },
+  oldprice: {
+    type: Number,
+    required: false
+  },
   category: {
     type: String,
     required: true

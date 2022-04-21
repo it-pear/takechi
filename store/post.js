@@ -28,9 +28,9 @@ export const actions = {
       throw e
     }
   },
-  async update({commit}, {id, text, title, recommend}) {
+  async update({commit}, {id, text, title, recommend, oldprice}) {
     try {
-      return await this.$axios.$put(`/api/post/admin/${id}`, {text, title, recommend})
+      return await this.$axios.$put(`/api/post/admin/${id}`, {text, title, recommend, oldprice})
     } catch (e) {
       commit('setError', e, {root: true})
       throw e
