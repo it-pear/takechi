@@ -1,7 +1,18 @@
 <template>
   <div>
     <HeaderSingle :category="category.title" :product="product" />
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <ul class="breadcumbers">
+            <li><nuxt-link to="/">Главная</nuxt-link> > </li>
+            <li><p>{{category.title}}</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <section id="menu-6" class="wide-70 menu-section division">
+      
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -13,7 +24,9 @@
         <div class="row">
           <products-list-filter :categories="categories" />
         </div>
-        
+        <div class="name_cetegory">
+          {{category.title}}
+        </div>
         <div class="row">
           <products-list-card
             v-for="product in products" 
@@ -70,6 +83,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.name_cetegory {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
 </style>
 

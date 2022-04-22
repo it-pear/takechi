@@ -16928,7 +16928,7 @@ span.ico-holder {
 }
 
 #tabs-nav {
-    margin-bottom: 70px
+    margin-bottom: 0px
 }
 
 @media (max-width: 772px) {
@@ -22187,7 +22187,7 @@ nav a#pull {
         right: 20px
     }
     #tabs-nav {
-        margin-bottom: 50px
+        margin-bottom: 30px
     }
     .tabs-1 li {
         padding: 0 25px
@@ -26683,4 +26683,24 @@ a:hover {
         font-size: 1rem;
         padding: 8px 10px;
     }
+}
+
+
+.breadcumbers {
+  display: flex;
+  padding-top: 20px;
+}
+.breadcumbers li {
+  margin-right: 4px;
+}
+.breadcumbers li a {
+  color: rgba(191, 22, 43, 1);
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-block;
+}
+.breadcumbers li p {
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
 }

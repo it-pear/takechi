@@ -1,6 +1,17 @@
 <template>
   <div>
     <HeaderSingle :product="product" />
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <ul class="breadcumbers">
+            <li><nuxt-link to="/">Главная</nuxt-link> > </li>
+            <li><nuxt-link :to="`/category/${product.category}`">{{product.categoryname}}</nuxt-link> > </li>
+            <li><p>{{product.title}}</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <section id="product-1" class="pt-100 single-product division pb-4">
       <div class="container">
         <div class="row">

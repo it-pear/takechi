@@ -177,7 +177,7 @@ export default {
         };
         this.$axios({
           method: 'post',
-          url: 'http://api.takeshigel.ru/sendmail.php',
+          url: 'https://api.takeshigel.ru/sendmail.php',
           headers: { 'content-type': 'application/json' },
           data: state
         }).then(res => {
