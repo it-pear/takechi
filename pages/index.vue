@@ -15,6 +15,11 @@
         <products-list-filter :categories="categories" />
 
         <div class="row">
+          <div class="name_cetegory">
+            Популярные блюда
+          </div>
+        </div>
+        <div class="row">
           <products-list-card
             v-for="product in filteredPosts.slice(0, 8)" 
             :key="product._id"
