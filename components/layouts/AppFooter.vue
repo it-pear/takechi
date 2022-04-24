@@ -42,7 +42,7 @@
             <p>
               &copy; 2021 TAKESHI <br /><br />
               <small>все права защищены</small><br /><br />
-              <small>ИП Сафронова Н.В и ИНН</small><br /><br />
+              <small>ИП Сафронова Н.В</small><br /><br />
               <small>ИНН 230400525180</small>
             </p><br>
             <a href="/policy" target="_blank">Политика конфиденциальности</a>
