@@ -17,8 +17,7 @@
     <li class="d-block d-md-none">
       <a href="#" style="text-align: left;margin-top: 8px;line-height: 1.1;">
         г. Геленджик<br>
-        Ул. Сурикова д.60<br>
-        Ул. Крымская д 19. К5
+        ул. Революционная 47
         </a>
     </li>
   </ul>

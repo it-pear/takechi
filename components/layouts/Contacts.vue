@@ -8,8 +8,7 @@
               <div class="cbox-5">
                 <h5 class="h5-lg">Местоположение</h5>
                 <p class="p-md">г. Геленджик</p>
-                <p class="p-md">Ул. Сурикова д.60</p>
-                <p class="p-md">Ул. Крымская д 19. К5</p>
+                <p class="p-md">ул. Революционная 47</p>
               </div>
             </div>
             <div class="col-md-4">
