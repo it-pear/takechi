@@ -197,13 +197,8 @@ export default {
         } catch (e) {} finally {
           this.loading = false
         }
-
-        // if (success) {
-        //   this.status = success ? cartStatus.success : cartStatus.fail;
-        //   document.location.href = '/thank'
-        // } else {
-        //   alert('asdasd');
-        // }
+        
+        document.location.href = '/thank'
         
       }
     }
