@@ -34,6 +34,7 @@
 
           <h5 class="h5-sm">{{ product.title }}</h5>
           <div>
+            <p style="margin-bottom: 0;font-size: 18px;" v-show="product.oldprice != null"><s>{{product.oldprice}} ₽</s></p>
             <div class="menu-6-price bg-salmon">
             <h5 class="h5-xs white-color">{{ product.price }} ₽</h5>
             </div>
