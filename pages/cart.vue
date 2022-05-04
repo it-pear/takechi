@@ -135,10 +135,14 @@ export default {
       cartPrice: 'cart/totalPrice'
     }),
     filteredProducts() {
-      return this.cartProducts.map(p => p.product.title).join()
-    },
-    filteredProducts2() {
-      return this.cartProducts.map( p => p.qty).join()
+      let productsCart = this.cartProducts.map(c => {
+        return {
+          title: c.product.title,
+          qty: c.qty,
+          price: c.price * c.qty
+        }
+      })
+      return productsCart
     }
   },
   methods: {
@@ -172,7 +176,6 @@ export default {
           phone: this.phone,
           adres: this.adres,
           menu: this.filteredProducts,
-          kolvo: this.filteredProducts2,
           totalprice: this.cartPrice
         };
         this.$axios({
